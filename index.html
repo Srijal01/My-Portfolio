@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Srijal Dangol</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/71ced39a4a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Student/Learner/Programmer</p>
+                <h1>Hi! I'm <span>Srijal Dangol</span><br>From Nepal</h1>
+            </div>
+        </div>
+    </div>
+
+<!--------------about-------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/profile.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am Srijal Dangol from Godawari-12, Thecho, Lalitpur, Bagmati, Nepal. I am a student currently pursuing a BSc.CSIT (Bachelor in Science of Computer Science and Information Technology) degree from Vedas College affiliated to Tribhuvan University. I have learned about various programming languages like HTML, CSS, C, C++, JavaScript, Python, etc with various libraries with respective languages. I love to watch and learn various programs related to AI, ML, Web and Security. Currently I am learning about Cyber Security (Deffensive) and web development (Frontend).</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('additional')">Additional</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages:</span><br>html, CSS, javascript, python, C/C++</li>
+                            <li><span>Database:</span><br>SQL</li>
+                            <li><span>Additional:</span><br>Tensorflow, Pandas, Git, React, django</li>
+                            <li><span>Others:</span><br>Team Leadership, Team Management</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span></span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>March 2022 - April 2026</span><br>Bachelor of Science in Computer Science and Information Technology <br>TRIBHUVAN UNIVERSITY</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="additional">
+                        <ul>
+                            <li><span>January 2025 - December 2025</span><br>CS50's Web Programming with Python and JavaScript<br>HarvardX CS50W</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------services-------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>The tasks associated with creating, building, and maintaining websites and web applications that run online on a browser. Planning, conceptualizing, and implementing the plan for designing a website in a way that is functional and offers a good user experience.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Logic Based Projects</h2>
+                    <p>A conceptual framework of how a program or project is understood, or intended, to contribute to its specified outcomes. It focuses on outcomes rather than process. It demonstrates the causal links between inputs, activities, outputs, and outcomes.</p>
+                </div>
+                <div>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <h2>Photoshop</h2>
+                    <p>An image creation, graphic design and photo editing which should be in raster image format. Photoshop is developed, from a simple small photo editing tool to an industry-leading software that changed the global graphic designing and multimedia industries standards.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------portfolio------------------>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Designing a webpage</h3>
+                        <p>The creation of websites and pages to reflect a company's brand and information and ensure a user-friendly experience.</p>
+                        <a href="https://github.com/Srijal01?tab=repositories"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Various logical projects</h3>
+                        <p>Developing different project models which solves multi-class classification problems based on various datasets.</p>
+                        <a href="https://github.com/Srijal01?tab=repositories"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Editing</h3>
+                        <p>Making changes to a text or film, deciding what will be removed and what will be kept in, in order to prepare it for being printed or shown.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------contact--------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>srijaldangol61@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+977 980-8570546</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/srijal.dangol.7"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/srijaldangol/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/srijal-dangol-18232a314/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Srijal01"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/SrijalCV.pdf" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Srijal's Portfolio <i class="fas fa-heart"></i></p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwXOqXcMk19QXXUjDARJDq3ZXI6YTOSK-xoE10Xa8bKHvtT1y-n0yDlGwThdi-k2K3wmg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
