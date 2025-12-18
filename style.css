@@ -57,10 +57,62 @@ nav ul li a:hover::after{
 .header-text{
     margin-top: 20%;
     font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
+    background: transparent !important;
+    padding: 0;
+    display: inline-block;
+    animation: fadeUp 0.9s ease-out both;
+}
+.role-rotator{
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 500;
+    white-space: nowrap;
+    animation: fadeUp 0.9s ease-out both;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+#roleText{
+    display: inline-block;
+    animation: fadeSlide 0.6s ease both, caret 0.8s step-end infinite;
+    border-right: 2px solid #fff;
+    padding-right: 6px;
+    min-height: 1em;
+}
+#roleText.fade{
+    animation: fadeSlide 0.6s ease both;
+}
+
+@keyframes caret{
+    50%{border-color: transparent;}
+}
+
+@keyframes fadeSlide{
+    from{opacity:0; transform: translateY(8px);}
+    to{opacity:1; transform: translateY(0);}
+}
+.header-text p{
+    animation: fadeUp 0.9s ease-out both;
+    animation-delay: 0.15s;
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform: translateY(18px);}
+    to{opacity:1; transform: translateY(0);}
+}
+
+@media (prefers-reduced-motion: reduce){
+    .header-text h1, .header-text p, #roleText{
+        animation: none;
+    }
 }
 .header-text h1 span{
     color: #ff004f;

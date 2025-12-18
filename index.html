@@ -24,7 +24,7 @@
                 <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Student/Learner/Programmer</p>
+                <p class="role-rotator"><span id="roleText">Student</span></p>
                 <h1>Hi! I'm <span>Srijal Dangol</span><br>From Nepal</h1>
             </div>
         </div>
@@ -269,6 +269,54 @@
                 moreText.style.display = "inline";
             }
         }
+
+        // Rotate hero role text
+        (function(){
+            var roles = ['Student', 'Learner', 'Programmer'];
+            var el = document.getElementById('roleText');
+            if(!el) return;
+
+            // Respect reduced motion
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                el.textContent = roles[0];
+                return;
+            }
+
+            var roleIndex = 0;
+            var charIndex = 0;
+            var deleting = false;
+            var typeDelay = 80;
+            var eraseDelay = 50;
+            var pauseAfterType = 1200;
+            var pauseAfterErase = 300;
+
+            function tick(){
+                var current = roles[roleIndex];
+
+                if(!deleting){
+                    el.textContent = current.substring(0, charIndex + 1);
+                    charIndex++;
+                    if(charIndex === current.length){
+                        deleting = true;
+                        setTimeout(tick, pauseAfterType);
+                        return;
+                    }
+                } else {
+                    el.textContent = current.substring(0, charIndex - 1);
+                    charIndex--;
+                    if(charIndex === 0){
+                        deleting = false;
+                        roleIndex = (roleIndex + 1) % roles.length;
+                        setTimeout(tick, pauseAfterErase);
+                        return;
+                    }
+                }
+
+                setTimeout(tick, deleting ? eraseDelay : typeDelay);
+            }
+
+            tick();
+        })();
     </script>
     
     <script>
