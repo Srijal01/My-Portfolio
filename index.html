@@ -39,7 +39,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>I am Srijal Dangol from Godawari-12, Thecho, Lalitpur, Bagmati, Nepal. I am a student currently pursuing a BSc.CSIT (Bachelor in Science of Computer Science and Information Technology) degree from Vedas College affiliated to Tribhuvan University. I have learned about various programming languages like HTML, CSS, C, C++, JavaScript, Python, C# etc with various libraries with respective languages. I love to watch and learn various programs related to AI, ML, Web and Security. Currently I am learning about Cyber Security (Deffensive) and web development (Frontend).</p>
+                    <p id="about-text">I am Srijal Dangol from Godawari-12, Thecho, Lalitpur, Bagmati, Nepal. I am a student currently pursuing a BSc.CSIT (Bachelor in Science of Computer Science and Information Technology) degree from Vedas College affiliated to Tribhuvan University. I have learned about various programming languages like HTML, CSS, C, C++, JavaScript, Python, C#, Java etc with various libraries with respective languages. I love to watch and learn various programs related to AI, ML, Web and Security. Currently I am learning about Cyber Security (Deffensive) and web development (Full Stack).</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -48,11 +48,11 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Languages:</span><br>html, CSS, JS, Python, C/C++, C#, Java</li>
-                            <li><span>Database:</span><br>SQL, MongoDB, PostgreSQL</li>
-                            <li><span>Additional:</span><br>Tensorflow, Pandas, Git, React, Django, Typescript, Numpy, XML, Nodejs, AngularJS, Vue, ASP .NET</li>
+                            <li><span>Languages:</span><br>HTML, CSS, JS, Python, C/C++, C#, Java</li>
+                            <li><span>Database:</span><br>SQL Server, MongoDB, PostgreSQL</li>
+                            <li><span>Additional:</span><br>Git, React, Django, Typescript, Numpy, XML, Nodejs, AngularJS, Vue, ASP .NET</li>
                             <li><span>Others:</span><br>Team Leadership, Team Management, Technical Writing, SEO, Research, Documentation, Client Handling</li>
-                            <li><span>Additional Tools:</span><br>MS Office Tools, Canva, Photoshop</li>
+                            <li><span>Additional Tools:</span><br>MS Office Tools, Canva, Photoshop, Figma</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
@@ -84,17 +84,20 @@
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Development</h2>
-                    <p>The tasks associated with creating, building, and maintaining websites and web applications that run online on a browser. Planning, conceptualizing, and implementing the plan for designing a website in a way that is functional and offers a good user experience.</p>
+                    <p class="service-text">The tasks associated with creating, building, and maintaining <span class="service-dots">...</span><span class="service-more" style="display: none;"> websites and web applications that run online on a browser. Planning, conceptualizing, and implementing the plan for designing a website in a way that is functional and offers a good user experience.</span></p>
+                    <button onclick="toggleService(this)" class="read-more-btn service-btn">Read More</button>
                 </div>
                 <div>
                     <i class="fa-solid fa-crop-simple"></i>
                     <h2>Logic Based Projects</h2>
-                    <p>A conceptual framework of how a program or project is understood, or intended, to contribute to its specified outcomes. It focuses on outcomes rather than process. It demonstrates the causal links between inputs, activities, outputs, and outcomes.</p>
+                    <p class="service-text">A conceptual framework of how a program or project is understood, <span class="service-dots">...</span><span class="service-more" style="display: none;"> or intended, to contribute to its specified outcomes. It focuses on outcomes rather than process. It demonstrates the causal links between inputs, activities, outputs, and outcomes.</span></p>
+                    <button onclick="toggleService(this)" class="read-more-btn service-btn">Read More</button>
                 </div>
                 <div>
                     <i class="fa-regular fa-pen-to-square"></i>
                     <h2>Technical Writing</h2>
-                    <p>A type of writing where the author explains or teaches something to the reader. It often involves documenting processes, explaining how systems work, or providing instructions.</p>
+                    <p class="service-text">A type of writing where the author explains <span class="service-dots">...</span><span class="service-more" style="display: none;"> or teaches something to the reader. It often involves documenting processes, explaining how systems work, or providing instructions.</span></p>
+                    <button onclick="toggleService(this)" class="read-more-btn service-btn">Read More</button>
                 </div>
             </div>
         </div>
@@ -106,27 +109,67 @@
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/work-1.png" alt="Webpage Design">
+                    <img src="images/work-1.png" alt="Portfolio">
                     <div class="layer">
-                        <h3>Designing a webpage</h3>
-                        <p>The creation of websites and pages to reflect a company's brand and information and ensure a user-friendly experience.</p>
-                        <a href="https://github.com/Srijal01?tab=repositories"><i class="fa-solid fa-arrow-up-right-from-square"></i>.</a>
+                        <h3>Personal Portfolio</h3>
+                        <p class="work-desc">My personal portfolio website<span class="work-dots">...</span><span class="work-more"> where I have included my personal data, skills, work experiences, etc. using HTML, CSS, and JavaScript.</span> <span onclick="toggleWork(this)" class="inline-read-more">Read More</span></p>
+                        <div class="work-links">
+                            <a href="https://github.com/Srijal01/My-Portfolio">Code</a>
+                            <a href="https://www.srijaldangol.com.np/">Demo</a>
+                        </div>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/work-2.png" alt="Logical Projects">
+                    <img src="images/work-2.png" alt="ACMS">
                     <div class="layer">
-                        <h3>Various logical projects</h3>
-                        <p>Developing different project models which solves multi-class classification problems based on various datasets.</p>
-                        <a href="https://github.com/Srijal01?tab=repositories"><i class="fa-solid fa-arrow-up-right-from-square"></i>.</a>
+                        <h3>Academic Conference Management System</h3>
+                        <p class="work-desc">System built with Next.js and Prisma<span class="work-dots">...</span><span class="work-more"> (SQLite) featuring secure user authentication, paper submission and review workflows, role-based reviewer/chair actions, a responsive UI with micro-interactions, and seeded demo data for quick testing.</span> <span onclick="toggleWork(this)" class="inline-read-more">Read More</span></p>
+                        <div class="work-links">
+                            <a href="https://github.com/Srijal01/ACMS">Code</a>
+                            <a href="https://acms-nine.vercel.app/">Demo</a>
+                        </div>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/work-3.png" alt="Technical Writing">
+                    <img src="images/work-3.png" alt="TechVerse Blog">
                     <div class="layer">
-                        <h3>Technical Writing</h3>
-                        <p>Writing contents for various purposes. Research Activities. Writing formal and informal reports and contents.</p>
-                        <a href="https://drive.google.com/file/d/1c4TIufkQfdZ4FZlG4xkjDnKfzpgTtAAd/view?usp=drive_link"><i class="fa-solid fa-arrow-up-right-from-square"></i>.</a>
+                        <h3>TechVerse Blog</h3>
+                        <p class="work-desc">A modern, fully-featured blog built with Next.js<span class="work-dots">...</span><span class="work-more"> (App Router) and Tailwind CSS. It includes a fresh teal/cyan/emerald theme, per-post images, a reusable SVG logo, and a subscription modal (dummy) ready to connect to your email provider.</span> <span onclick="toggleWork(this)" class="inline-read-more">Read More</span></p>
+                        <div class="work-links">
+                            <a href="https://github.com/Srijal01/TechVerse">Code</a>
+                            <a href="https://tech-verse-taupe.vercel.app/">Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-4.png" alt="Chiropractor">
+                    <div class="layer">
+                        <h3>Chiropractor Website</h3>
+                        <p class="work-desc">A modern, responsive website for a chiropractor clinic<span class="work-dots">...</span><span class="work-more"> built with HTML, CSS, and JavaScript. It features sections for services, testimonials, and contact information to enhance user engagement.</span> <span onclick="toggleWork(this)" class="inline-read-more">Read More</span></p>
+                        <div class="work-links">
+                            <a href="https://github.com/Srijal01/Chiropractor">Code</a>
+                            <a href="https://chiropractor-indol.vercel.app/">Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-5.png" alt="Uddheshya Group">
+                    <div class="layer">
+                        <h3>Company Profile</h3>
+                        <p class="work-desc">A responsive portfolio website for Uddheshya Group<span class="work-dots">...</span><span class="work-more">, showcasing company information, services, and contact details.</span> <span onclick="toggleWork(this)" class="inline-read-more">Read More</span></p>
+                        <div class="work-links">
+                            <a href="https://www.uddheshyagroup.com/">Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-6.png" alt="Stamford Chiropractic">
+                    <div class="layer">
+                        <h3>Wordpress Website</h3>
+                        <p class="work-desc">A responsive portfolio website for Stamford Chiropractic<span class="work-dots">...</span><span class="work-more">, showcasing company information, services, and contact details.</span> <span onclick="toggleWork(this)" class="inline-read-more">Read More</span></p>
+                        <div class="work-links">
+                            <a href="https://stamfordchiropractic.co.uk/">Demo</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,26 +185,26 @@
                     <p><i class="fa-solid fa-paper-plane"></i>srijaldangol61@gmail.com</p>
                     <p><i class="fa-solid fa-phone"></i>+977 980-8570546</p>
                     <div class="social-icons">
-                        <a rel="noreferrer noopener" target="_blank" href="https://www.facebook.com/srijaldangol02"><i class="fa-brands fa-facebook"></i>.</a>
-                        <a rel="noreferrer noopener" target="_blank" href="https://www.instagram.com/srijaldangol/"><i class="fa-brands fa-instagram"></i>.</a>
-                        <a rel="noreferrer noopener" target="_blank" href="https://www.linkedin.com/in/srijaldangol/"><i class="fa-brands fa-linkedin"></i>.</a>
-                        <a rel="noreferrer noopener" target="_blank" href="https://github.com/Srijal01"><i class="fa-brands fa-github"></i>.</a>
+                        <a rel="noreferrer noopener" target="_blank" href="https://www.facebook.com/srijaldangol02"><i class="fa-brands fa-facebook"></i></a>
+                        <a rel="noreferrer noopener" target="_blank" href="https://www.instagram.com/srijaldangol/"><i class="fa-brands fa-instagram"></i></a>
+                        <a rel="noreferrer noopener" target="_blank" href="https://www.linkedin.com/in/srijaldangol/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a rel="noreferrer noopener" target="_blank" href="https://github.com/Srijal01"><i class="fa-brands fa-github"></i></a>
                     </div>
                     <a rel="noreferrer noopener" target="_blank" href="images/SrijalCV.pdf" class="btn btn2">View CV</a>
                 </div>
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <form action="https://formsubmit.co/srijaldangol61@gmail.com" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <input type="hidden" name="_captcha" value="false">
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
-                    <span id="msg"></span>
                 </div>
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright © Srijal's Portfolio <i class="fas fa-heart"></i></p>
+            <p>2023 Copyright © Srijal's Portfolio <i class="fas fa-heart"></i></p>
         </div>
     </div>
 
@@ -178,6 +221,54 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+
+        function toggleReadMore() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("readMoreBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read More";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read Less";
+                moreText.style.display = "inline";
+            }
+        }
+
+        function toggleService(btn) {
+            var serviceDiv = btn.parentElement;
+            var dots = serviceDiv.querySelector(".service-dots");
+            var moreText = serviceDiv.querySelector(".service-more");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btn.innerHTML = "Read More";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btn.innerHTML = "Read Less";
+                moreText.style.display = "inline";
+            }
+        }
+
+        function toggleWork(btn) {
+            var workDiv = btn.closest('.layer');
+            var dots = workDiv.querySelector(".work-dots");
+            var moreText = workDiv.querySelector(".work-more");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btn.innerHTML = "Read More";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btn.innerHTML = "Read Less";
+                moreText.style.display = "inline";
+            }
+        }
     </script>
     
     <script>
@@ -189,23 +280,5 @@
             sidemenu.style.right = "-200px";
         }
     </script>
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwXOqXcMk19QXXUjDARJDq3ZXI6YTOSK-xoE10Xa8bKHvtT1y-n0yDlGwThdi-k2K3wmg/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully!"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
 </body>
 </html>
