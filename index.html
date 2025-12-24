@@ -122,8 +122,8 @@
                 <div class="work">
                     <img src="images/work-2.png" alt="ACMS">
                     <div class="layer">
-                        <h3>Academic Conference Management System</h3>
-                        <p class="work-desc">System built with Next.js and Prisma<span class="work-dots">...</span><span class="work-more"> (SQLite) featuring secure user authentication, paper submission and review workflows, role-based reviewer/chair actions, a responsive UI with micro-interactions, and seeded demo data for quick testing.</span> <span onclick="toggleWork(this)" class="inline-read-more">Read More</span></p>
+                        <h3>ACMS</h3>
+                        <p class="work-desc">System featuring secure user authentication,<span class="work-dots">...</span><span class="work-more"> paper submission and review workflows, role-based reviewer/chair actions, a responsive UI with micro-interactions, and seeded demo data for quick testing.</span> <span onclick="toggleWork(this)" class="inline-read-more">Read More</span></p>
                         <div class="work-links">
                             <a href="https://github.com/Srijal01/ACMS">Code</a>
                             <a href="https://acms-nine.vercel.app/">Demo</a>
@@ -134,7 +134,7 @@
                     <img src="images/work-3.png" alt="TechVerse Blog">
                     <div class="layer">
                         <h3>TechVerse Blog</h3>
-                        <p class="work-desc">A modern, fully-featured blog built with Next.js<span class="work-dots">...</span><span class="work-more"> (App Router) and Tailwind CSS. It includes a fresh teal/cyan/emerald theme, per-post images, a reusable SVG logo, and a subscription modal (dummy) ready to connect to your email provider.</span> <span onclick="toggleWork(this)" class="inline-read-more">Read More</span></p>
+                        <p class="work-desc">A modern, fully-featured blog includes a<span class="work-dots">...</span><span class="work-more"> fresh teal/cyan/emerald theme, per-post images, a reusable SVG logo, and a subscription modal (dummy) ready to connect to your email provider.</span> <span onclick="toggleWork(this)" class="inline-read-more">Read More</span></p>
                         <div class="work-links">
                             <a href="https://github.com/Srijal01/TechVerse">Code</a>
                             <a href="https://tech-verse-taupe.vercel.app/">Demo</a>
@@ -142,7 +142,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/work_4.png" alt="Musicaa">
+                    <img src="images/work-4.png" alt="Musicaa">
                     <div class="layer">
                         <h3>E-Commerce Website</h3>
                         <p class="work-desc">A responsive full stack e-commerce website<span class="work-dots">...</span><span class="work-more">, showcasing product information, services, and sell details with authentication and payment gateway.</span> <span onclick="toggleWork(this)" class="inline-read-more">Read More</span></p>
@@ -207,125 +207,6 @@
         </div>
     </div>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-        function toggleReadMore() {
-            var dots = document.getElementById("dots");
-            var moreText = document.getElementById("more");
-            var btnText = document.getElementById("readMoreBtn");
-
-            if (dots.style.display === "none") {
-                dots.style.display = "inline";
-                btnText.innerHTML = "Read More";
-                moreText.style.display = "none";
-            } else {
-                dots.style.display = "none";
-                btnText.innerHTML = "Read Less";
-                moreText.style.display = "inline";
-            }
-        }
-
-        function toggleService(btn) {
-            var serviceDiv = btn.parentElement;
-            var dots = serviceDiv.querySelector(".service-dots");
-            var moreText = serviceDiv.querySelector(".service-more");
-
-            if (dots.style.display === "none") {
-                dots.style.display = "inline";
-                btn.innerHTML = "Read More";
-                moreText.style.display = "none";
-            } else {
-                dots.style.display = "none";
-                btn.innerHTML = "Read Less";
-                moreText.style.display = "inline";
-            }
-        }
-
-        function toggleWork(btn) {
-            var workDiv = btn.closest('.layer');
-            var dots = workDiv.querySelector(".work-dots");
-            var moreText = workDiv.querySelector(".work-more");
-
-            if (dots.style.display === "none") {
-                dots.style.display = "inline";
-                btn.innerHTML = "Read More";
-                moreText.style.display = "none";
-            } else {
-                dots.style.display = "none";
-                btn.innerHTML = "Read Less";
-                moreText.style.display = "inline";
-            }
-        }
-
-        // Rotate hero role text
-        (function(){
-            var roles = ['Student', 'Learner', 'Programmer'];
-            var el = document.getElementById('roleText');
-            if(!el) return;
-
-            // Respect reduced motion
-            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                el.textContent = roles[0];
-                return;
-            }
-
-            var roleIndex = 0;
-            var charIndex = 0;
-            var deleting = false;
-            var typeDelay = 80;
-            var eraseDelay = 50;
-            var pauseAfterType = 1200;
-            var pauseAfterErase = 300;
-
-            function tick(){
-                var current = roles[roleIndex];
-
-                if(!deleting){
-                    el.textContent = current.substring(0, charIndex + 1);
-                    charIndex++;
-                    if(charIndex === current.length){
-                        deleting = true;
-                        setTimeout(tick, pauseAfterType);
-                        return;
-                    }
-                } else {
-                    el.textContent = current.substring(0, charIndex - 1);
-                    charIndex--;
-                    if(charIndex === 0){
-                        deleting = false;
-                        roleIndex = (roleIndex + 1) % roles.length;
-                        setTimeout(tick, pauseAfterErase);
-                        return;
-                    }
-                }
-
-                setTimeout(tick, deleting ? eraseDelay : typeDelay);
-            }
-
-            tick();
-        })();
-    </script>
-    
-    <script>
-        var sidemenu = document.getElementById("sidemenu");
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
