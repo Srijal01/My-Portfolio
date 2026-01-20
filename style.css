@@ -603,6 +603,22 @@ nav .fas{
     .about-col-2{
         font-size: 14px;
     }
+    .about-col-2 p{
+        line-height: 1.7;
+        text-align: justify;
+    }
+    #about{
+        padding: 50px 0;
+    }
+    .tab-contents ul li{
+        margin: 15px 0;
+        line-height: 1.6;
+    }
+    .tab-contents ul li span{
+        display: block;
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
     .services-list{
         grid-template-columns: 1fr;
         grid-gap: 25px;
@@ -611,9 +627,16 @@ nav .fas{
     .services-list div{
         padding: 30px 25px;
     }
+    .tab-titles{
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 15px 0 30px;
+    }
     .tab-links{
-        font-size: 16px;
-        margin-right: 20px;
+        font-size: 14px;
+        margin-right: 10px;
+        padding: 8px 12px;
+        white-space: nowrap;
     }
     #portfolio{
         padding: 30px 0;
