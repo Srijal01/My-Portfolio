@@ -556,19 +556,29 @@ nav .fas{
         right: 20px;
         font-size: 18px;
     }
+    .logo{
+        width: 100px;
+    }
     nav .fas{
         display: block;
-        font-size: 20px;
+        font-size: 22px;
+        cursor: pointer;
+        color: #14b8a6;
     }
     #header{
         background-image: url(images/photo_background.jpg);
     }
     .header-text{
-        margin-top: 80%;
+        margin-top: 100%;
         font-size: 16px;
+        padding: 0 5%;
     }
     .header-text h1{
-        font-size: 30px;
+        font-size: 32px;
+        line-height: 1.3;
+    }
+    .role-rotator{
+        font-size: 20px;
     }
     nav ul{
         background: #343434;
@@ -610,6 +620,20 @@ nav .fas{
     #about{
         padding: 50px 0;
     }
+    .tab-titles::after{
+        content: '→';
+        position: absolute;
+        right: 5%;
+        color: #14b8a6;
+        font-size: 18px;
+        opacity: 0.6;
+        pointer-events: none;
+        animation: slideHint 1.5s ease-in-out infinite;
+    }
+    @keyframes slideHint{
+        0%, 100%{transform: translateX(0);}
+        50%{transform: translateX(5px);}
+    }
     .tab-contents ul li{
         margin: 15px 0;
         line-height: 1.6;
@@ -627,16 +651,29 @@ nav .fas{
     .services-list div{
         padding: 30px 25px;
     }
+    .services-list div:active{
+        transform: scale(0.98);
+    }
     .tab-titles{
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 15px 0 30px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin: 15px -5% 30px;
+        padding: 0 5%;
+        gap: 0;
+    }
+    .tab-titles::-webkit-scrollbar{
+        display: none;
     }
     .tab-links{
         font-size: 14px;
-        margin-right: 10px;
-        padding: 8px 12px;
+        margin-right: 12px;
+        padding: 10px 16px;
         white-space: nowrap;
+        flex-shrink: 0;
+        display: inline-block;
     }
     #portfolio{
         padding: 30px 0;
@@ -698,7 +735,12 @@ nav .fas{
         min-width: 80px;
     form input, form textarea{
         font-size: 16px;
-        padding: 12px;
+        padding: 14px;
+    }
+    .btn.btn2{
+        width: 100%;
+        text-align: center;
+        padding: 16px;
     }
     }
     .inline-read-more{
