@@ -467,7 +467,7 @@ nav ul li a:hover::after{
 #contact{
     position: relative;
     z-index: 1;
-    padding: 100px 0;
+    padding: 30px 0;
     background: rgba(15, 15, 15, 0.5);
 }
 .contact-left{
