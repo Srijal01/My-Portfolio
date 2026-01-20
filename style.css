@@ -467,7 +467,7 @@ nav ul li a:hover::after{
 #contact{
     position: relative;
     z-index: 1;
-    padding: 30px 30px;
+    padding: 20px 30px;
     background: rgba(15, 15, 15, 0.5);
 }
 .contact-left{
@@ -477,7 +477,7 @@ nav ul li a:hover::after{
     flex-basis: 60%;
 }
 .contact-left p{
-    margin-top: 30px;
+    margin-top: 15px;
 }
 .contact-left p i{
     color: #14b8a6;
@@ -485,7 +485,7 @@ nav ul li a:hover::after{
     font-size: 25px;
 }
 .social-icons{
-    margin-top: 30px;
+    margin-top: 15px;
 }
 .social-icons a{
     text-decoration: none;
@@ -512,7 +512,7 @@ form input, form textarea{
     outline: none;
     background: rgba(38, 38, 38, 0.8);
     padding: 16px;
-    margin: 15px 0;
+    margin: 5px 0;
     color: #fff;
     font-size: 16px;
     border-radius: 12px;
@@ -527,7 +527,7 @@ form input:focus, form textarea:focus{
 form btn2{
     padding: 14px 60px;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 5px;
     cursor: pointer;
 }
 .copyright{
