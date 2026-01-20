@@ -12,22 +12,6 @@ function opentab(tabname){
     document.getElementById(tabname).classList.add("active-tab");
 }
 
-function toggleReadMore() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("readMoreBtn");
-
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read More";
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read Less";
-        moreText.style.display = "inline";
-    }
-}
-
 function toggleService(btn) {
     var serviceDiv = btn.parentElement;
     var dots = serviceDiv.querySelector(".service-dots");
@@ -215,12 +199,5 @@ function closemenu(){
     });
 })();
 
-// Typing Animation Enhancement - Add cursor
-(function() {
-    const roleText = document.getElementById('roleText');
-    if (roleText) {
-        roleText.style.borderRight = '2px solid #ff004f';
-        roleText.style.paddingRight = '5px';
-    }
-})();
+
 
