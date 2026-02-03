@@ -905,14 +905,17 @@ form button[type="submit"]:disabled {
     content: '▹';
     position: absolute;
     left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     color: #ff004f;
     font-size: 22px;
     font-weight: bold;
+    line-height: 1;
     transition: all 0.3s ease;
 }
 
 .blog-list li:hover::before {
-    transform: translateX(5px);
+    transform: translateY(-50%) translateX(5px);
 }
 
 .blog-list li a {
