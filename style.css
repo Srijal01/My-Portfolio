@@ -859,3 +859,66 @@ form button[type="submit"]:disabled {
         font-size: 18px;
     }
 }
+/* ------------------- Blog Section ------------------- */
+#blog {
+    padding: 50px 0;
+    background: #080808;
+}
+
+#blog .sub-title {
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: #ababab;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.blog-list {
+    list-style: none;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.blog-list li {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.blog-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #ff004f;
+    font-size: 20px;
+}
+
+.blog-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 10px 0;
+}
+
+.blog-list li a:hover {
+    color: #ff004f;
+    transform: translateX(5px);
+}
+
+/* Blog Responsive */
+@media only screen and (max-width: 768px) {
+    .blog-list li a {
+        font-size: 16px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+    }
+}
