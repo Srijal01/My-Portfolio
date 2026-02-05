@@ -120,12 +120,6 @@ nav ul li a:hover::after{
     padding-right: 6px;
     min-height: 1em;
 }
-#roleText.fade{
-
-}
-
-.header-text p{
-}
 
 .header-text h1 span{
     color: #14b8a6;
