@@ -37,7 +37,7 @@ body{
 }
 
 .container{
-    padding: 10px 10%;
+    padding: 10px 8%;
     position: relative;
     z-index: 2;
 }
@@ -50,7 +50,7 @@ nav{
     top: 0;
     left: 0;
     right: 0;
-    padding: 20px 10%;
+    padding: 15px 8%;
     background: rgba(8, 8, 8, 0.95);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -69,7 +69,7 @@ nav{
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 8px 15px;
 }
 nav ul li a{
     color: #fff;
@@ -96,7 +96,7 @@ nav ul li a:hover::after{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    gap: 10px;
 }
 .header-text h1{
     font-size: 60px;
@@ -104,54 +104,35 @@ nav ul li a:hover::after{
     background: transparent !important;
     padding: 0;
     display: inline-block;
-    animation: fadeUp 0.9s ease-out both;
 }
 .role-rotator{
     display: inline-block;
     font-size: 28px;
     font-weight: 500;
     white-space: nowrap;
-    animation: fadeUp 0.9s ease-out both;
     line-height: 1.2;
     margin-bottom: 4px;
 }
 
 #roleText{
     display: inline-block;
-    animation: fadeSlide 0.6s ease both;
     border-right: 2px solid #fff;
     padding-right: 6px;
     min-height: 1em;
 }
 #roleText.fade{
-    animation: fadeSlide 0.6s ease both;
+
 }
 
-@keyframes fadeSlide{
-    from{opacity:0; transform: translateY(8px);}
-    to{opacity:1; transform: translateY(0);}
-}
 .header-text p{
-    animation: fadeUp 0.9s ease-out both;
-    animation-delay: 0.15s;
 }
 
-@keyframes fadeUp{
-    from{opacity:0; transform: translateY(18px);}
-    to{opacity:1; transform: translateY(0);}
-}
-
-@media (prefers-reduced-motion: reduce){
-    .header-text h1, .header-text p, #roleText{
-        animation: none;
-    }
-}
 .header-text h1 span{
     color: #14b8a6;
 }
 /*------------------about---------------------*/
 #about{
-    padding: 100px 0;
+    padding: 60px 0;
     color: #ababab;
     position: relative;
     z-index: 1;
@@ -169,56 +150,34 @@ nav ul li a:hover::after{
     width: 100%;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(20, 184, 166, 0.15);
-    transition: all 0.4s ease;
-}
-.about-col-1 img:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 30px 80px rgba(20, 184, 166, 0.25);
 }
 .about-col-2{
     flex-basis: 60%;
-    overflow: hidden;
-    word-wrap: break-word;
+}
+.about-col-2 p{
+    line-height: 1.6;
 }
 .sub-title{
     font-size: 48px;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
-.sub-title::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #14b8a6, #0d9488);
-    border-radius: 2px;
+    margin-bottom: 15px;
 }
 .tab-titles{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 20px 0 40px;
+    margin: 15px 0 25px;
 }
 .tab-links{
     margin-right: 0;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    position: relative;
     padding: 10px 20px;
     border-radius: 8px;
-    transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.02);
     white-space: nowrap;
-}
-.tab-links:hover{
-    background: rgba(20, 184, 166, 0.1);
-    color: #14b8a6;
 }
 .tab-links::after{
     content: '';
@@ -228,7 +187,7 @@ nav ul li a:hover::after{
     position: absolute;
     left: 0;
     bottom: -8px;
-    transition: 0.5s;
+
 }
 .tab-links.active-link{
     background: rgba(20, 184, 166, 0.15);
@@ -266,6 +225,8 @@ nav ul li a:hover::after{
 .read-more-btn:hover{
     background: #14b8a6;
     color: #080808;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(20, 184, 166, 0.3);
 }
 .service-btn{
     margin-top: 15px;
@@ -300,15 +261,15 @@ nav ul li a:hover::after{
 }
 /*------------------services--------------------------*/
 #services{
-    padding: 50px 0;
+    padding: 60px 0;
     position: relative;
     z-index: 1;
 }
 .services-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    margin-top: 35px;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
@@ -324,8 +285,8 @@ nav ul li a:hover::after{
 }
 
 .services-list div{
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(17, 94, 89, 0.8) 100%);
-    padding: 40px;
+    background: rgba(15, 23, 42, 0.9);
+    padding: 30px;
     font-size: 14px;
     font-weight: 300;
     border-radius: 16px;
@@ -334,17 +295,23 @@ nav ul li a:hover::after{
     word-wrap: break-word;
     border: 1px solid rgba(20, 184, 166, 0.1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 .services-list div i{
     font-size: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #14b8a6;
     display: block;
+    transition: all 0.3s ease;
+}
+.services-list div:hover i{
+    transform: scale(1.1) rotateY(360deg);
+    color: #5eead4;
 }
 .services-list h2{
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     color: #fff;
 }
 .services-list div a{
@@ -355,22 +322,22 @@ nav ul li a:hover::after{
     display: inline-block;
 }
 .services-list div:hover{
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(17, 94, 89, 0.95) 100%);
-    transform: translateY(-12px);
-    box-shadow: 0 20px 60px rgba(20, 184, 166, 0.3);
-    border-color: rgba(20, 184, 166, 0.3);
+    background: rgba(17, 94, 89, 0.95);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 70px rgba(20, 184, 166, 0.4);
+    border-color: rgba(20, 184, 166, 0.5);
 }
 /*---------------portfolio----------*/
 #portfolio{
-    padding: 100px 0;
+    padding: 60px 0;
     position: relative;
     z-index: 1;
 }
 .work-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    margin-top: 35px;
 }
 .work{
     border-radius: 16px;
@@ -378,10 +345,11 @@ nav ul li a:hover::after{
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 .work:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(20, 184, 166, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 70px rgba(20, 184, 166, 0.35);
 }
 .work img{
     width: 100%;
@@ -394,7 +362,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(17, 94, 89, 0.95) 100%);
+    background: rgba(15, 23, 42, 0.97);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -404,27 +372,27 @@ nav ul li a:hover::after{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 30px;
     text-align: center;
     font-size: 15px;
     transition: height 0.5s;
 }
 .layer h3{
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-size: 28px;
     color: #fff;
 }
 .layer p{
     color: #fff;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-size: 15px;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
 .layer a{
-    margin: 10px 8px;
+    margin: 5px 8px;
     color: #115e59;
     text-decoration: none;
     font-size: 16px;
@@ -441,7 +409,8 @@ nav ul li a:hover::after{
 .layer a:hover{
     background: #14b8a6;
     color: #fff;
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(20, 184, 166, 0.4);
 }
 .work:hover img{
     transform: scale(1.1);
@@ -462,6 +431,8 @@ nav ul li a:hover::after{
 }
 .btn:hover{
     background: #14b8a6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(20, 184, 166, 0.4);
 }
 /*-----------contact-------------*/
 #contact{
